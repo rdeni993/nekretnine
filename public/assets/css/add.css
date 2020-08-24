@@ -1,0 +1,55 @@
+#faq .card-header{
+    background: rgb(42, 41, 41);
+    color: #fff;
+}
+#faq .card-body{
+    color: rgb(42, 41, 41);
+}
+#faq .my-3{
+    margin: 50px 0!important;
+}
+
+/** Update 1 **/
+.box-link{ text-decoration: none!important; }
+.article:hover{ box-shadow: 0 0 4px #888; }
+.premium-but{ 
+    position: absolute; 
+    top: 0px; 
+    background: #fff;
+    padding: .25em 1em;
+    margin: 10px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    background: gold;
+    font-weight: bold;
+    color: #000;
+    box-shadow: 0 0 3px #888;
+}
+.share-button{
+    margin-left: 0!important;
+    padding-left: 0!important;
+}
+.share-button i{
+    margin: 0!important;
+    margin-left: 0em!important;
+    margin-right: .25em!important;
+    padding: 0!important;
+}
+.image-form-info input{
+    border: none!important;
+}
+.page-carousel{
+    z-index: 9999!important;
+}
+.fb-share-button{
+    color: #000!important;
+    text-decoration: none;
+    display: none!important;
+}
+.cookies-info{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+}

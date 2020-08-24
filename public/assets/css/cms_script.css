@@ -1,0 +1,114 @@
+/**
+*
+*   This is script only for
+*   this CMS system
+*   ========================
+*/
+html, body{ background: rgb(246, 243, 243); }
+.navbar a{ color: #fff!important; }
+.nav-item{ margin: 0 12px; }
+.nav-item:last-child{ margin: 0; }
+
+.dash-nav{
+    width: 100%!important;
+    text-align: left!important;
+    border-radius: 0; 
+    box-shadow: 0px 0px 10px #888;
+}
+.dash-nav a{
+    text-align: left!important;
+    border-bottom: 1px solid red;
+    text-decoration: none!important;
+    color: rgb(53, 50, 50);
+    padding: 12px 12px;
+}
+.dash-nav a:last-child{
+    border: none;
+}
+.dashboard-item h1{
+    font-size: 1.8em;
+}
+.dashboard-item{
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 10px #888;
+    border-radius: 7px;
+}
+.dashboard-container{
+    background: #fff;
+    border-radius: 9px;
+    border: 1px solid #888;
+    box-shadow: 0 0 8px #aaa;
+}
+.user-navigation a{
+    color: rgb(248, 239, 239)!important;
+}
+.user-navigation{
+    background: rgb(68, 103, 179)!important;
+}
+.user-vertical-nav button{
+    background: rgb(68, 103, 179)!important;
+    text-decoration: none!important;
+    text-align: left!important;
+}
+.user-vertical-nav a{
+    text-decoration: none!important;
+}
+.prop-content article{
+    display: inline-flex;
+    float: left;
+    width: 30%!important;
+    margin: 1.666%;
+    height: 450px;
+}
+.prop-content article img{
+    height: 150px;
+}
+.prop-content article{
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.prop-content article:hover{
+    box-shadow: 0 0 10px #aaa;
+}
+.prop-content a{
+    text-decoration: none;
+}
+.prop-content .card-footer > .card-text{
+    font-size: .8em!important;
+    text-decoration: none!important;
+    color: #888
+}
+.add-article{
+    margin: auto;
+}
+.add-article-list{
+    list-style: none!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+.avatars button{
+    border: 1px solid red;
+    background: none;
+}
+.avatars img{
+    width: 48px;
+}
+
+.search-user-data button{
+    display:none;
+}
+
+.find-prop-din button,
+.find-prop-din a{
+    display: none;
+}
+.report-article-mess .card-body{
+    display: none;
+}
+.endup-reports a{
+    text-decoration: none;
+    color: #888;
+    cursor: default;
+}
+#display_user_admin{
+    display: flex!important;
+}

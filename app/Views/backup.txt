@@ -1,0 +1,89 @@
+<!--
+    $props holding all properties
+ -->
+<!-- Include Header -->
+<?php echo $header; ?>
+
+<!-- Include Main Navigation-->
+<?php echo $navigation; ?>
+<!-- EOF Main Navigation-->
+
+<!-- BODY -->
+<div class="container basic-font bg-white p-0">
+            
+    <!-- Update 1 -->
+        <div class="row mt-3 p-0">
+            <div class="col-lg-4 text-center p-4">
+                <!-- Desktop -->
+                <?php if(!empty($database_user)): ?>
+                <img src="<?php echo base_url() . '/public/assets/img/avatars/' . $database_user->user_avatar; ?>" alt="img" />
+                <h1 class="mt-4"><?php echo $database_user->user_name; ?></h1>
+                <?php else: ?>
+                    <p>(Profil nije ispravan)</p>
+                <?php endif; ?>
+                <p class="mt-4"><i class="fa fa-mobile"></i> <?php echo ($database_user->user_mobile != 'none') ? : "Nema broja"; ?></p>
+                <?php $doc = strtotime($database_user->user_last_update); ?>
+                <p class="mt-4 text-secondary"><small>Zadnji put na mreži:</small><br><?php echo date("d. M Y", $doc); ?></p>
+                <p>
+                    <?php if(@$my_props): ?>
+                        <?php echo "Trenutno oglasa:" . sizeof($my_props); ?>
+                    <?php else: ?>
+                        <?php echo "Trenutno nema oglasa"; ?>
+                    <?php endif; ?>
+                </p>
+                <!-- eof desktop -->
+            </div>
+            <div class="col-lg-8">
+                <?php if(!empty($database_user)): ?>                
+                <table class="mt-4 user-profile-table">
+                    <?php if(@$my_props): ?>
+                        <?php foreach($my_props as $prop): ?>
+                           <tr>
+                                <td><img src="<?php echo $prop->property_image; ?>" alt="Property Logo"></td>
+                                <td class="px-4">
+                                        <h4><?php echo $prop->property_title; ?></h4>
+                                        <p>
+                                            <span>
+                                            <?php foreach($prop_types as $prop_d): ?>
+                                                <?php if($prop_d->ID == $prop->property_type ): ?>
+                                                    <?php echo $prop_d->type; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                            </span>
+                                            <span class="ml-2">
+                                            <?php foreach($rent_types as $prop_d): ?>
+                                                <?php if($prop_d->ID == $prop->property_rent ): ?>
+                                                    <?php echo $prop_d->type; ?>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
+                                            </span>
+                                            <span class="ml-2">
+                                                <?php echo $prop->property_location; ?>
+                                            </span>
+                                        </p>
+                                        <p>
+                                            <h5>
+                                                <?php echo $prop->property_price; ?> €  
+                                                <a class="ml-4 btn btn-primary text-white article-info" href="<?php echo site_url('article/index/' . $prop->property_ID . '/' . urlencode($prop->property_title) ); ?>">
+                                                    Pogledaj
+                                                </a>
+                                            </h5>
+                                        </p>
+                                </td>
+                            </tr>
+                            </a>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </table>
+                <?php else: ?>
+                    <p>(Nema trenutno oglasa)</p>
+                <?php endif; ?>
+            </div>
+        </div>
+    <!-- eof -->
+</div>
+
+<!-- EOF BODY --> 
+
+<!-- Include Footer-->
+<?php echo $footer; ?>
